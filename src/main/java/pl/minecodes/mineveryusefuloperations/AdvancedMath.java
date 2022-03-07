@@ -25,7 +25,7 @@ public final class AdvancedMath {
      * @return result
      */
     public static int subtract(int num0, int num1) {
-        for (int i = 0; i < num1; i++) {
+        for (int i = 0; i < num1; i = sum(i, 1)) {
             num0 -= 1;
         }
 
@@ -40,8 +40,8 @@ public final class AdvancedMath {
      */
     public static int multiply(int num0, int num1) {
         int product = 0;
-        for (int i = 0; i < num1; i++) {
-            product += num0;
+        for (int i = 0; i < num1; i = sum(i, 1)) {
+            product = sum(product, num0);
         }
 
         return product;
@@ -54,7 +54,7 @@ public final class AdvancedMath {
      */
     public static int factorial(int number){
         int product = 1;
-        for (int i = 0; i < number; i++) {
+        for (int i = 0; i < number; i = sum(i, 1)) {
             product = sum(product, multiply(product,i));
         }
         return product;
@@ -75,8 +75,8 @@ public final class AdvancedMath {
 
         int quotient = 0;
         while (num0 >= num1) {
-            num0 -= num1;
-            quotient++;
+            num0 = subtract(num0, num1);
+            quotient = sum(quotient, 1);
         }
 
         return quotient;

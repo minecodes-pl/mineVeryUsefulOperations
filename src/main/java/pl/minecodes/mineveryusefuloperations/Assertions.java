@@ -11,12 +11,11 @@ public final class Assertions {
      * @return true, if bool is true, false if bool is false
      */
     public static boolean assertTrue(boolean bool) {
-        if (bool == true) {
+        if (String.valueOf(bool).equalsIgnoreCase("true")) {
             return true;
-        } else if (bool == false) {
+        } else if (String.valueOf(bool).equalsIgnoreCase("false")) {
             return false;
         }
-
         throw new RuntimeException("shit happened, bool is not true nor false");
     }
 

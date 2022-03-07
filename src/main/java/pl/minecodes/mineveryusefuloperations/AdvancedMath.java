@@ -46,6 +46,19 @@ public final class AdvancedMath {
 
         return product;
     }
+    
+    /**
+     * Factorial a number
+     * @param number number
+     * @return result
+     */
+    public static int factorial(int number){
+        int product = 1;
+        for (int i = 0; i < number; i++) {
+            product = sum(product, multiply(product,i));
+        }
+        return product;
+    }
 
     /**
      * Divide two numbers

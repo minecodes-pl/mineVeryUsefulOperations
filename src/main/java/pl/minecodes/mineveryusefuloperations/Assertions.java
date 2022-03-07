@@ -43,9 +43,9 @@ public final class Assertions {
      * @return true if they are equal, false otherwise
      */
     public static boolean assertEquals(Object o1, Object o2) {
-        if (o1.equals(o2) == true) {
+        if (assertTrue(o1.equals(o2)) == true) {
             return true;
-        } else if (o1.equals(o2) == false) {
+        } else if (assertTrue(o1.equals(o2)) == false) {
             return false;
         }
 
@@ -60,9 +60,9 @@ public final class Assertions {
      * @return true if they are not equal, false otherwise
      */
     public static boolean assertNotEquals(Object o1, Object o2) {
-        if (o2.equals(o1) == true) {
+        if (assertTrue(o2.equals(o1)) == true) {
             return true;
-        } else if (o2.equals(o1) == false) {
+        } else if (assertTrue(o2.equals(o1)) == false) {
             return false;
         }
 

@@ -81,5 +81,16 @@ public final class AdvancedMath {
 
         return quotient;
     }
+    
+    /**
+     * Derivative of a function
+     * @param function function for derivative
+     * @param num0 first number
+     * @param num1 second number
+     * @return result
+     */
+    public static double derivative(Function<Double, Double> function, double num0, double num1){
+        return (function.apply(num0 + num1 / 2) - function.apply(num0 - num1 / 2)) / num1;
+    }
 
 }
